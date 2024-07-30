@@ -10,11 +10,11 @@ class Genre(models.Model):
 
 class Movie(models.Model):
     title = models.CharField(max_length=200,blank=False,null=False)
+    poster=models.URLField()
     director=models.CharField(max_length=100,blank=False,null=False)
     outline = models.TextField(blank=False,null=False)
-    language=models.CharField(max_length=52,null=True,blank=True)
-    released_on=models.CharField(max_length=100,blank=True,null=True)
-    runtime=models.CharField(max_length=24,blank=True,null=True)
+    language=models.CharField(max_length=52,null=False,blank=False)
+    released_on=models.CharField(max_length=100,blank=False,null=False)
     genre=models.ManyToManyField(Genre,blank=True,null=True)
     movie_url = models.URLField()
     
