@@ -16,6 +16,10 @@ class Movie(models.Model):
     language=models.CharField(max_length=52,null=False,blank=False)
     released_on=models.CharField(max_length=100,blank=False,null=False)
     genre=models.ManyToManyField(Genre,blank=True,null=True)
+    criticsscore=models.IntegerField(null=True,blank=True)
+    criticsreviews=models.IntegerField(null=True,blank=True)
+    audiencescore=models.IntegerField(null=True,blank=True)
+    audiencereviews=models.IntegerField(null=True,blank=True)
     movie_url = models.URLField()
     
     def __str__(self):

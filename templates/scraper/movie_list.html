@@ -10,25 +10,6 @@
     <div class="container mt-5">
         <h1 class="mb-4">Movie List</h1>
         <a href="{% url 'scrape_movie' %}" class="btn btn-success mb-3">Scrape New Movie</a>
-        {% comment %} <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Director</th>
-                    <th>Outline</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for movie in movies %}
-                <tr>
-                    <td>{{ movie.title }}</td>
-                    <td>{{ movie.director}}</td>
-                    <td>{{ movie.outline}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table> {% endcomment %}
-
         <div class="container mt-5">
             <div class="row justify-content-center">
                 {% for movie in movies %}
